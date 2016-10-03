@@ -11,7 +11,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button bLogin;
+    private Button bLogin1;
     private Button bNextTest;
 
     @Override
@@ -19,10 +19,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
 
-        bLogin = (Button)findViewById(R.id.bLogin);
+        bLogin1 = (Button)findViewById(R.id.bLogin);
         bNextTest = (Button)findViewById(R.id.bNextActivityTemp);
 
-        bLogin.setOnClickListener(new View.OnClickListener() {
+        bLogin1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Toast toast = Toast.makeText(getApplicationContext(), "Pressed", Toast.LENGTH_SHORT);
