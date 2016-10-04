@@ -1,46 +1,26 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+package Objects;
+public class Club {
+    protected String name;
+    protected String information;
 
+    public Club(String name, String information) {
+        this.name = name;
+        this.information = information;
+    }
 
-namespace XamaAndrTest.Objects
-{
-    public class Club
-    {
-        private string _name;
-        private string _information;
+    public String getName() {
+        return name;
+    }
 
-        public Club(string _name, string _information)
-        {
-            this._name = _name;
-            this._information = _information;
-        }
+    public void setName(String name) {
+        this.name = name;
+    }
 
-        public string Name
-        {
-            get
-            {
-                return _name;
-            }
+    public String getInformation() {
+        return information;
+    }
 
-            set
-            {
-                _name = value;
-            }
-        }
-
-        public string Information
-        {
-            get
-            {
-                return _information;
-            }
-
-            set
-            {
-                _information = value;
-            }
-        }
+    public void setInformation(String information) {
+        this.information = information;
     }
 }

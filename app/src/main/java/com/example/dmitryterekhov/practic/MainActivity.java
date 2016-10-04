@@ -9,25 +9,33 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import Objects.User;
+
 public class MainActivity extends AppCompatActivity {
 
-    private Button bLogin1;
+    private Button bLogin;
     private Button bNextTest;
+    User user;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
 
-        bLogin1 = (Button)findViewById(R.id.bLogin);
+        bLogin = (Button)findViewById(R.id.bLogin);
         bNextTest = (Button)findViewById(R.id.bNextActivityTemp);
+        user = new User();
 
-        bLogin1.setOnClickListener(new View.OnClickListener() {
+        bLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast toast = Toast.makeText(getApplicationContext(), "Pressed", Toast.LENGTH_SHORT);
-                toast.setGravity(Gravity.CENTER,0,0);
-                toast.show();
+                user.setLogin("root");
+                user.setPassword("root");
+                if ((user.getLogin() == "root") && (user.getPassword().equals("root"))) {
+                    Toast toast = Toast.makeText(getApplicationContext(), "Pressed", Toast.LENGTH_SHORT);
+                    toast.setGravity(Gravity.CENTER, 0, 0);
+                    toast.show();
+                }
             }
         });
 
