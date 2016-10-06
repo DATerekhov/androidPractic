@@ -2,15 +2,16 @@ package Objects;
 
 import org.bson.types.ObjectId;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Client extends User {
     protected int growth;
-    protected List<Weight> weights;
-    protected List<Trainer> trainers;
+    protected ArrayList<Weight> weights;
+    protected ArrayList<Trainer> trainers;
     protected String presenseStatus;
 
-    public Client(ObjectId _id, String _login, String _password, String _role, String _fio, Object _foto, String _contacts, int _growth, List<Weight> _weights, List<Trainer> _trainers, String _presenseStatus) {
+    public Client(ObjectId _id, String _login, String _password, String _role, String _fio, Object _foto, String _contacts, int _growth, ArrayList<Weight> _weights, ArrayList<Trainer> _trainers, String _presenseStatus) {
         super(_id, _login, _password, _role, _fio, _foto, _contacts);
         this.growth = _growth;
         this.weights = _weights;
@@ -18,7 +19,7 @@ public class Client extends User {
         this.presenseStatus = _presenseStatus;
     }
 
-    public Client(int _growth, List<Weight> _weights, List<Trainer> _trainers, String _presenseStatus) {
+    public Client(int _growth, ArrayList<Weight> _weights, ArrayList<Trainer> _trainers, String _presenseStatus) {
         this.growth = _growth;
         this.weights = _weights;
         this.trainers = _trainers;

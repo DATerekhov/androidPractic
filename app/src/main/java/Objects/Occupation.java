@@ -2,6 +2,7 @@ package Objects;
 
 import org.bson.types.ObjectId;
 import java.sql.Timestamp;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -14,12 +15,12 @@ public class Occupation {
     protected Timestamp occupationEnd;
     protected String status;
     protected String purpose;
-    protected List<ObjectId> exercises;
+    protected ArrayList<ObjectId> exercises;
     protected String mark;
     protected Double calorificValue;
     protected Double estimatedExecutionPlan;
 
-    public Occupation(ObjectId id, ObjectId client, ObjectId trainer, Date date, Timestamp occupationStart, Timestamp occupationEnd, String status, String purpose, List<ObjectId> exercises, String mark, Double calorificValue, Double estimatedExecutionPlan) {
+    public Occupation(ObjectId id, ObjectId client, ObjectId trainer, Date date, Timestamp occupationStart, Timestamp occupationEnd, String status, String purpose, ArrayList<ObjectId> exercises, String mark, Double calorificValue, Double estimatedExecutionPlan) {
         this.id = id;
         this.client = client;
         this.trainer = trainer;
