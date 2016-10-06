@@ -1,9 +1,8 @@
-package Objects;
+package com.example.dmitryterekhov.practic.Objects;
 
 import org.bson.types.ObjectId;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class Client extends User {
     protected int growth;

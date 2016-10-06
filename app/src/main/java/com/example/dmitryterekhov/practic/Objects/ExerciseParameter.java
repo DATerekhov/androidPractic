@@ -1,4 +1,4 @@
-package Objects;
+package com.example.dmitryterekhov.practic.Objects;
 
     public class ExerciseParameter {
         protected String title;

@@ -1,5 +1,6 @@
 package com.example.dmitryterekhov.practic;
 
+import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -15,11 +16,14 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 
+import com.example.dmitryterekhov.practic.fragments.FragmentImport;
+
 public class MenuActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     Button bExercise;
     Button bCardio;
+    FragmentImport fragmentImport;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,6 +66,9 @@ public class MenuActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        fragmentImport = new FragmentImport();
+
     }
 
     @Override
@@ -102,8 +109,10 @@ public class MenuActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
+        FragmentTransaction ftrans = getFragmentManager().beginTransaction();
+
         if (id == R.id.nav_camera) {
-            // Handle the camera action
+            ftrans.replace(R.id.menu_container, fragmentImport);
         } else if (id == R.id.nav_gallery) {
 
         } else if (id == R.id.nav_slideshow) {
@@ -115,6 +124,7 @@ public class MenuActivity extends AppCompatActivity
         } else if (id == R.id.nav_send) {
 
         }
+        ftrans.commit();
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

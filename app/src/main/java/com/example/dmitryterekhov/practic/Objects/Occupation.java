@@ -1,4 +1,4 @@
-package Objects;
+package com.example.dmitryterekhov.practic.Objects;
 
 import org.bson.types.ObjectId;
 import java.sql.Timestamp;

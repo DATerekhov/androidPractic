@@ -1,4 +1,4 @@
-package Objects;
+package com.example.dmitryterekhov.practic.Objects;
 
 import java.util.Date;
 
